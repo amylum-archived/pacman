@@ -1,11 +1,13 @@
 PACKAGE = pacman
 ORG = amylum
 
+DEP_DIR = /tmp/dep-dir
+
 BUILD_DIR = /tmp/$(PACKAGE)-build
 RELEASE_DIR = /tmp/$(PACKAGE)-release
 RELEASE_FILE = /tmp/$(PACKAGE).tar.gz
-PATH_FLAGS = --prefix=$(RELEASE_DIR) --sbindir=$(RELEASE_DIR)/usr/bin --bindir=$(RELEASE_DIR)/usr/bin --mandir=$(RELEASE_DIR)/usr/share/man --libdir=$(RELEASE_DIR)/usr/lib --includedir=$(RELEASE_DIR)/usr/include --docdir=$(RELEASE_DIR)/usr/share/doc/$(PACKAGE) --sysconfdir=/etc --with-scriptlet-shell=/usr/bin/bash
-CFLAGS = -static -static-libgcc -Wl,-static -lc
+PATH_FLAGS = --prefix=$(RELEASE_DIR) --sbindir=$(RELEASE_DIR)/usr/bin --bindir=$(RELEASE_DIR)/usr/bin --mandir=$(RELEASE_DIR)/usr/share/man --libdir=$(RELEASE_DIR)/usr/lib --includedir=$(RELEASE_DIR)/usr/include --docdir=$(RELEASE_DIR)/usr/share/doc/$(PACKAGE) --sysconfdir=/etc --with-scriptlet-shell=/usr/bin/bash --localstatedir=/var
+CFLAGS = -static -static-libgcc -Wl,-static -lc -I$(DEP_DIR)/include
 
 PACKAGE_VERSION = $$(git --git-dir=upstream/.git describe --tags | sed 's/v//')
 PATCH_VERSION = $$(cat version)
@@ -25,8 +27,10 @@ container:
 	./meta/launch
 
 build: submodule
-	rm -rf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR) $(DEP_DIR)
 	cp -R upstream $(BUILD_DIR)
+	mkdir -p $(DEP_DIR)/include
+	cp /usr/include/archive.h $(DEP_DIR)/include/
 	cd $(BUILD_DIR) && ./autogen.sh
 	cd $(BUILD_DIR) && CC=musl-gcc CFLAGS='$(CFLAGS)' ./configure $(PATH_FLAGS)
 	cd $(BUILD_DIR) && make install
