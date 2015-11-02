@@ -7,7 +7,7 @@ BUILD_DIR = /tmp/$(PACKAGE)-build
 RELEASE_DIR = /tmp/$(PACKAGE)-release
 RELEASE_FILE = /tmp/$(PACKAGE).tar.gz
 PATH_FLAGS = --prefix=$(RELEASE_DIR) --sbindir=$(RELEASE_DIR)/usr/bin --bindir=$(RELEASE_DIR)/usr/bin --mandir=$(RELEASE_DIR)/usr/share/man --libdir=$(RELEASE_DIR)/usr/lib --includedir=$(RELEASE_DIR)/usr/include --docdir=$(RELEASE_DIR)/usr/share/doc/$(PACKAGE) --sysconfdir=/etc --with-scriptlet-shell=/usr/bin/bash --localstatedir=/var
-CFLAGS = -static -static-libgcc -Wl,-static -lc -I$(DEP_DIR)/usr/include
+CFLAGS = -static -static-libgcc -Wl,-static -lc -I$(DEP_DIR)/usr/local/include
 
 LIBARCHIVE_VERSION = 3.1.2
 LIBARCHIVE_URL = http://libarchive.org/downloads/libarchive-$(LIBARCHIVE_VERSION).tar.gz
