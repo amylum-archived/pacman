@@ -13,25 +13,25 @@ VERSION = $(PACKAGE_VERSION)-$(PATCH_VERSION)
 
 LIBARCHIVE_VERSION = 3.1.2-1
 LIBARCHIVE_URL = https://github.com/amylum/libarchive/releases/download/$(LIBARCHIVE_VERSION)/libarchive.tar.gz
-LIBARCHIVE_TAR = libarchive.tar.gz
+LIBARCHIVE_TAR = /tmp/libarchive.tar.gz
 LIBARCHIVE_DIR = /tmp/libarchive
 LIBARCHIVE_PATH = -I$(LIBARCHIVE_DIR)/usr/include -L$(LIBARCHIVE_DIR)/usr/lib
 
 CURL_VERSION = 7.45.0-1
 CURL_URL = https://github.com/amylum/curl/releases/download/$(CURL_VERSION)/curl.tar.gz
-CURL_TAR = curl.tar.gz
+CURL_TAR = /tmp/curl.tar.gz
 CURL_DIR = /tmp/curl
 CURL_PATH = -I$(CURL_DIR)/usr/include -L$(CURL_DIR)/usr/lib
 
 OPENSSL_VERSION = 1.0.2d-1
 OPENSSL_URL = https://github.com/amylum/openssl/releases/download/$(OPENSSL_VERSION)/openssl.tar.gz
-OPENSSL_TAR = openssl.tar.gz
+OPENSSL_TAR = /tmp/openssl.tar.gz
 OPENSSL_DIR = /tmp/openssl
 OPENSSL_PATH = -I$(OPENSSL_DIR)/usr/include -L$(OPENSSL_DIR)/usr/lib
 
 ZLIB_VERSION = 1.2.8-1
 ZLIB_URL = https://github.com/amylum/zlib/releases/download/$(ZLIB_VERSION)/zlib.tar.gz
-ZLIB_TAR = zlib.tar.gz
+ZLIB_TAR = /tmp/zlib.tar.gz
 ZLIB_DIR = /tmp/zlib
 ZLIB_PATH = -I$(ZLIB_DIR)/usr/include -L$(ZLIB_DIR)/usr/lib
 
