@@ -23,6 +23,12 @@ CURL_TAR = curl.tar.gz
 CURL_DIR = /tmp/curl
 CURL_PATH = -I$(CURL_DIR)/usr/include -L$(CURL_DIR)/usr/lib
 
+OPENSSL_VERSION = 7.45.0-1
+OPENSSL_URL = https://github.com/amylum/openssl/releases/download/$(OPENSSL_VERSION)/openssl.tar.gz
+OPENSSL_TAR = openssl.tar.gz
+OPENSSL_DIR = /tmp/openssl
+OPENSSL_PATH = -I$(OPENSSL_DIR)/usr/include -L$(OPENSSL_DIR)/usr/lib
+
 .PHONY : default submodule deps manual container deps build version push local
 
 default: submodule container
@@ -45,13 +51,17 @@ deps:
 	mkdir $(CURL_DIR)
 	curl -sLo $(CURL_TAR) $(CURL_URL)
 	tar -x -C $(CURL_DIR) -f $(CURL_TAR)
+	rm -rf $(OPENSSL_DIR) $(OPENSSL_TAR)
+	mkdir $(OPENSSL_DIR)
+	curl -sLo $(OPENSSL_TAR) $(OPENSSL_URL)
+	tar -x -C $(OPENSSL_DIR) -f $(OPENSSL_TAR)
 
 build: submodule deps
 	rm -rf $(BUILD_DIR)
 	cp -R upstream $(BUILD_DIR)
 	cd $(BUILD_DIR) && ./autogen.sh
 	patch -p1 -d $(BUILD_DIR) < patches/ensure-matching-database-and-package-version.patch
-	cd $(BUILD_DIR) && CC=musl-gcc CFLAGS='$(CFLAGS) $(LIBARCHIVE_PATH) $(CURL_PATH)' ./configure $(PATH_FLAGS)
+	cd $(BUILD_DIR) && CC=musl-gcc CFLAGS='$(CFLAGS) $(LIBARCHIVE_PATH) $(CURL_PATH) $(OPENSSL_PATH)' ./configure $(PATH_FLAGS)
 	cd $(BUILD_DIR) && make install
 	mkdir -p $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)
 	cp $(BUILD_DIR)/COPYING $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)/LICENSE
