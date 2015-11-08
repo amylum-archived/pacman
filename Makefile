@@ -29,6 +29,12 @@ OPENSSL_TAR = openssl.tar.gz
 OPENSSL_DIR = /tmp/openssl
 OPENSSL_PATH = -I$(OPENSSL_DIR)/usr/include -L$(OPENSSL_DIR)/usr/lib
 
+ZLIB_VERSION = 1.2.8-1
+ZLIB_URL = https://github.com/amylum/zlib/releases/download/$(ZLIB_VERSION)/zlib.tar.gz
+ZLIB_TAR = zlib.tar.gz
+ZLIB_DIR = /tmp/zlib
+ZLIB_PATH = -I$(ZLIB_DIR)/usr/include -L$(ZLIB_DIR)/usr/lib
+
 .PHONY : default submodule deps manual container deps build version push local
 
 default: submodule container
@@ -55,6 +61,10 @@ deps:
 	mkdir $(OPENSSL_DIR)
 	curl -sLo $(OPENSSL_TAR) $(OPENSSL_URL)
 	tar -x -C $(OPENSSL_DIR) -f $(OPENSSL_TAR)
+	rm -rf $(ZLIB_DIR) $(ZLIB_TAR)
+	mkdir $(ZLIB_DIR)
+	curl -sLo $(ZLIB_TAR) $(ZLIB_URL)
+	tar -x -C $(ZLIB_DIR) -f $(ZLIB_TAR)
 
 build: submodule deps
 	rm -rf $(BUILD_DIR)
