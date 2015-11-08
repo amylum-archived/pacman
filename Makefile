@@ -37,6 +37,12 @@ ZLIB_TAR = /tmp/zlib.tar.gz
 ZLIB_DIR = /tmp/zlib
 ZLIB_PATH = -I$(ZLIB_DIR)/usr/include -L$(ZLIB_DIR)/usr/lib
 
+GPGME_VERSION = 1.6.0-1
+GPGME_URL = https://github.com/amylum/gpgme/releases/download/$(GPGME_VERSION)/gpgme.tar.gz
+GPGME_TAR = /tmp/gpgme.tar.gz
+GPGME_DIR = /tmp/gpgme
+GPGME_PATH = -I$(GPGME_DIR)/usr/include -L$(GPGME_DIR)/usr/lib
+
 .PHONY : default submodule deps manual container deps build version push local
 
 default: submodule container
@@ -67,13 +73,17 @@ deps:
 	mkdir $(ZLIB_DIR)
 	curl -sLo $(ZLIB_TAR) $(ZLIB_URL)
 	tar -x -C $(ZLIB_DIR) -f $(ZLIB_TAR)
+	rm -rf $(GPGME_DIR) $(GPGME_TAR)
+	mkdir $(GPGME_DIR)
+	curl -sLo $(GPGME_TAR) $(GPGME_URL)
+	tar -x -C $(GPGME_DIR) -f $(GPGME_TAR)
 
 build: submodule deps
 	rm -rf $(BUILD_DIR)
 	cp -R upstream $(BUILD_DIR)
 	cd $(BUILD_DIR) && ./autogen.sh
 	patch -p1 -d $(BUILD_DIR) < patches/ensure-matching-database-and-package-version.patch
-	cd $(BUILD_DIR) && CC=musl-gcc LIBSSL_LIBS='$(LIBSSL_LIBS)' CFLAGS='$(CFLAGS) $(LIBARCHIVE_PATH) $(CURL_PATH) $(OPENSSL_PATH)' ./configure $(PATH_FLAGS) $(CONF_FLAGS)
+	cd $(BUILD_DIR) && CC=musl-gcc LIBSSL_LIBS='$(LIBSSL_LIBS)' CFLAGS='$(CFLAGS) $(LIBARCHIVE_PATH) $(CURL_PATH) $(OPENSSL_PATH) $(GPGME_PATH)' ./configure $(PATH_FLAGS) $(CONF_FLAGS)
 	cd $(BUILD_DIR) && make DESTDIR=$(RELEASE_DIR) install
 	mkdir -p $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)
 	cp $(BUILD_DIR)/COPYING $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)/LICENSE
