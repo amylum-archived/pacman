@@ -1,8 +1,8 @@
 item do
   expected do
     url_xpath
-    url 'https://projects.archlinux.org/pacman.git/refs/'
-    xpath '//*[@id="cgit"]/div[1]/table/tr[7]/td[1]/a'
+    url 'https://projects.archlinux.org/pacman.git/refs/tags'
+    xpath '//*[@id="cgit"]/div[1]/table/tr[2]/td[1]/a'
     regex /^v([\d.]+)$/
   end
 
