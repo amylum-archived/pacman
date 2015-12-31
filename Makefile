@@ -49,7 +49,7 @@ LIBGPG-ERROR_TAR = /tmp/libgpgerror.tar.gz
 LIBGPG-ERROR_DIR = /tmp/libgpg-error
 LIBGPG-ERROR_PATH = -I$(LIBGPG-ERROR_DIR)/usr/include -L$(LIBGPG-ERROR_DIR)/usr/lib
 
-LIBASSUAN_VERSION = 2.4.0-1
+LIBASSUAN_VERSION = 2.4.2-3
 LIBASSUAN_URL = https://github.com/amylum/libassuan/releases/download/$(LIBASSUAN_VERSION)/libassuan.tar.gz
 LIBASSUAN_TAR = /tmp/libassuan.tar.gz
 LIBASSUAN_DIR = /tmp/libassuan
