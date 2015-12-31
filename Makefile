@@ -43,7 +43,7 @@ GPGME_TAR = /tmp/gpgme.tar.gz
 GPGME_DIR = /tmp/gpgme
 GPGME_PATH = -I$(GPGME_DIR)/usr/include -L$(GPGME_DIR)/usr/lib
 
-LIBGPG-ERROR_VERSION = 1.20-1
+LIBGPG-ERROR_VERSION = 1.21-3
 LIBGPG-ERROR_URL = https://github.com/amylum/libgpg-error/releases/download/$(LIBGPG-ERROR_VERSION)/libgpg-error.tar.gz
 LIBGPG-ERROR_TAR = /tmp/libgpgerror.tar.gz
 LIBGPG-ERROR_DIR = /tmp/libgpg-error
