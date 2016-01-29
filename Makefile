@@ -24,7 +24,7 @@ CURL_TAR = /tmp/curl.tar.gz
 CURL_DIR = /tmp/curl
 CURL_PATH = -I$(CURL_DIR)/usr/include -L$(CURL_DIR)/usr/lib
 
-OPENSSL_VERSION = 1.0.2f-3
+OPENSSL_VERSION = 1.0.2f-5
 OPENSSL_URL = https://github.com/amylum/openssl/releases/download/$(OPENSSL_VERSION)/openssl.tar.gz
 OPENSSL_TAR = /tmp/openssl.tar.gz
 OPENSSL_DIR = /tmp/openssl
