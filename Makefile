@@ -31,7 +31,7 @@ OPENSSL_DIR = /tmp/openssl
 OPENSSL_PATH = -I$(OPENSSL_DIR)/usr/include -L$(OPENSSL_DIR)/usr/lib
 LIBSSL_LIBS = -lz
 
-ZLIB_VERSION = 1.2.8-1
+ZLIB_VERSION = 1.2.8-2
 ZLIB_URL = https://github.com/amylum/zlib/releases/download/$(ZLIB_VERSION)/zlib.tar.gz
 ZLIB_TAR = /tmp/zlib.tar.gz
 ZLIB_DIR = /tmp/zlib
