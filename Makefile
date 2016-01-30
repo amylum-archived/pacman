@@ -103,7 +103,6 @@ build: submodule deps
 	rm -rf $(BUILD_DIR)
 	cp -R upstream $(BUILD_DIR)
 	cd $(BUILD_DIR) && ./autogen.sh
-	patch -p1 -d $(BUILD_DIR) < patches/ensure-matching-database-and-package-version.patch
 	cd $(BUILD_DIR) && CC=musl-gcc LIBSSL_LIBS='$(LIBSSL_LIBS)' CFLAGS='$(CFLAGS) $(LIBARCHIVE_PATH) $(CURL_PATH) $(OPENSSL_PATH) $(ZLIB_PATH) $(GPGME_PATH) $(LIBGPG-ERROR_PATH) $(LIBASSUAN_PATH)' ./configure $(PATH_FLAGS) $(CONF_FLAGS)
 	cd $(BUILD_DIR) && make DESTDIR=$(RELEASE_DIR) install
 	mkdir -p $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)
