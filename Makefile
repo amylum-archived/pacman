@@ -6,32 +6,32 @@ RELEASE_DIR = /tmp/$(PACKAGE)-release
 RELEASE_FILE = /tmp/$(PACKAGE).tar.gz
 PATH_FLAGS = --prefix=/usr --sysconfdir=/etc --with-scriptlet-shell=/usr/bin/bash --localstatedir=/var
 CONF_FLAGS = --disable-doc --with-gpgme
-CFLAGS = -static -static-libgcc -Wl,-static -lc
+CFLAGS =
 
 PACKAGE_VERSION = $$(git --git-dir=upstream/.git describe --tags | sed 's/v//')
 PATCH_VERSION = $$(cat version)
 VERSION = $(PACKAGE_VERSION)-$(PATCH_VERSION)
 
-LIBARCHIVE_VERSION = 3.1.2-1
+LIBARCHIVE_VERSION = 3.2.0-2
 LIBARCHIVE_URL = https://github.com/amylum/libarchive/releases/download/$(LIBARCHIVE_VERSION)/libarchive.tar.gz
 LIBARCHIVE_TAR = /tmp/libarchive.tar.gz
 LIBARCHIVE_DIR = /tmp/libarchive
 LIBARCHIVE_PATH = -I$(LIBARCHIVE_DIR)/usr/include -L$(LIBARCHIVE_DIR)/usr/lib
 
-CURL_VERSION = 7.48.0-10
+CURL_VERSION = 7.48.0-11
 CURL_URL = https://github.com/amylum/curl/releases/download/$(CURL_VERSION)/curl.tar.gz
 CURL_TAR = /tmp/curl.tar.gz
 CURL_DIR = /tmp/curl
 CURL_PATH = -I$(CURL_DIR)/usr/include -L$(CURL_DIR)/usr/lib
 
-OPENSSL_VERSION = 1.0.2g-6
+OPENSSL_VERSION = 1.0.2h-7
 OPENSSL_URL = https://github.com/amylum/openssl/releases/download/$(OPENSSL_VERSION)/openssl.tar.gz
 OPENSSL_TAR = /tmp/openssl.tar.gz
 OPENSSL_DIR = /tmp/openssl
 OPENSSL_PATH = -I$(OPENSSL_DIR)/usr/include -L$(OPENSSL_DIR)/usr/lib
 LIBSSL_LIBS = -lz
 
-ZLIB_VERSION = 1.2.8-2
+ZLIB_VERSION = 1.2.8-4
 ZLIB_URL = https://github.com/amylum/zlib/releases/download/$(ZLIB_VERSION)/zlib.tar.gz
 ZLIB_TAR = /tmp/zlib.tar.gz
 ZLIB_DIR = /tmp/zlib
@@ -43,13 +43,13 @@ GPGME_TAR = /tmp/gpgme.tar.gz
 GPGME_DIR = /tmp/gpgme
 GPGME_PATH = -I$(GPGME_DIR)/usr/include -L$(GPGME_DIR)/usr/lib
 
-LIBGPG-ERROR_VERSION = 1.21-3
+LIBGPG-ERROR_VERSION = 1.22-4
 LIBGPG-ERROR_URL = https://github.com/amylum/libgpg-error/releases/download/$(LIBGPG-ERROR_VERSION)/libgpg-error.tar.gz
 LIBGPG-ERROR_TAR = /tmp/libgpgerror.tar.gz
 LIBGPG-ERROR_DIR = /tmp/libgpg-error
 LIBGPG-ERROR_PATH = -I$(LIBGPG-ERROR_DIR)/usr/include -L$(LIBGPG-ERROR_DIR)/usr/lib
 
-LIBASSUAN_VERSION = 2.4.2-3
+LIBASSUAN_VERSION = 2.4.2-4
 LIBASSUAN_URL = https://github.com/amylum/libassuan/releases/download/$(LIBASSUAN_VERSION)/libassuan.tar.gz
 LIBASSUAN_TAR = /tmp/libassuan.tar.gz
 LIBASSUAN_DIR = /tmp/libassuan
