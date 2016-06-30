@@ -97,7 +97,7 @@ deps:
 	mkdir $(LIBASSUAN_DIR)
 	curl -sLo $(LIBASSUAN_TAR) $(LIBASSUAN_URL)
 	tar -x -C $(LIBASSUAN_DIR) -f $(LIBASSUAN_TAR)
-	rm -f /tmp/libassuan/usr/lib/libassuan.la
+	find /tmp -name '*.la' -delete
 
 build: submodule deps
 	rm -rf $(BUILD_DIR)
