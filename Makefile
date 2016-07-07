@@ -37,13 +37,13 @@ ZLIB_TAR = /tmp/zlib.tar.gz
 ZLIB_DIR = /tmp/zlib
 ZLIB_PATH = -I$(ZLIB_DIR)/usr/include -L$(ZLIB_DIR)/usr/lib
 
-GPGME_VERSION = 1.6.0-4
+GPGME_VERSION = 1.6.0-5
 GPGME_URL = https://github.com/amylum/gpgme/releases/download/$(GPGME_VERSION)/gpgme.tar.gz
 GPGME_TAR = /tmp/gpgme.tar.gz
 GPGME_DIR = /tmp/gpgme
 GPGME_PATH = -I$(GPGME_DIR)/usr/include -L$(GPGME_DIR)/usr/lib
 
-LIBGPG-ERROR_VERSION = 1.22-4
+LIBGPG-ERROR_VERSION = 1.23-5
 LIBGPG-ERROR_URL = https://github.com/amylum/libgpg-error/releases/download/$(LIBGPG-ERROR_VERSION)/libgpg-error.tar.gz
 LIBGPG-ERROR_TAR = /tmp/libgpgerror.tar.gz
 LIBGPG-ERROR_DIR = /tmp/libgpg-error
