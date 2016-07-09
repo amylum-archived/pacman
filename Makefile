@@ -12,7 +12,7 @@ PACKAGE_VERSION = $$(git --git-dir=upstream/.git describe --tags | sed 's/v//')
 PATCH_VERSION = $$(cat version)
 VERSION = $(PACKAGE_VERSION)-$(PATCH_VERSION)
 
-LIBARCHIVE_VERSION = 3.2.0-2
+LIBARCHIVE_VERSION = 3.2.1-3
 LIBARCHIVE_URL = https://github.com/amylum/libarchive/releases/download/$(LIBARCHIVE_VERSION)/libarchive.tar.gz
 LIBARCHIVE_TAR = /tmp/libarchive.tar.gz
 LIBARCHIVE_DIR = /tmp/libarchive
@@ -37,7 +37,7 @@ ZLIB_TAR = /tmp/zlib.tar.gz
 ZLIB_DIR = /tmp/zlib
 ZLIB_PATH = -I$(ZLIB_DIR)/usr/include -L$(ZLIB_DIR)/usr/lib
 
-GPGME_VERSION = 1.6.0-5
+GPGME_VERSION = 1.6.0-6
 GPGME_URL = https://github.com/amylum/gpgme/releases/download/$(GPGME_VERSION)/gpgme.tar.gz
 GPGME_TAR = /tmp/gpgme.tar.gz
 GPGME_DIR = /tmp/gpgme
@@ -49,7 +49,7 @@ LIBGPG-ERROR_TAR = /tmp/libgpgerror.tar.gz
 LIBGPG-ERROR_DIR = /tmp/libgpg-error
 LIBGPG-ERROR_PATH = -I$(LIBGPG-ERROR_DIR)/usr/include -L$(LIBGPG-ERROR_DIR)/usr/lib
 
-LIBASSUAN_VERSION = 2.4.2-4
+LIBASSUAN_VERSION = 2.4.2-6
 LIBASSUAN_URL = https://github.com/amylum/libassuan/releases/download/$(LIBASSUAN_VERSION)/libassuan.tar.gz
 LIBASSUAN_TAR = /tmp/libassuan.tar.gz
 LIBASSUAN_DIR = /tmp/libassuan
