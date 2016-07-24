@@ -18,7 +18,7 @@ LIBARCHIVE_TAR = /tmp/libarchive.tar.gz
 LIBARCHIVE_DIR = /tmp/libarchive
 LIBARCHIVE_PATH = -I$(LIBARCHIVE_DIR)/usr/include -L$(LIBARCHIVE_DIR)/usr/lib
 
-CURL_VERSION = 7.49.1-13
+CURL_VERSION = 7.50.0-14
 CURL_URL = https://github.com/amylum/curl/releases/download/$(CURL_VERSION)/curl.tar.gz
 CURL_TAR = /tmp/curl.tar.gz
 CURL_DIR = /tmp/curl
@@ -37,19 +37,19 @@ ZLIB_TAR = /tmp/zlib.tar.gz
 ZLIB_DIR = /tmp/zlib
 ZLIB_PATH = -I$(ZLIB_DIR)/usr/include -L$(ZLIB_DIR)/usr/lib
 
-GPGME_VERSION = 1.6.0-6
+GPGME_VERSION = 1.6.0-7
 GPGME_URL = https://github.com/amylum/gpgme/releases/download/$(GPGME_VERSION)/gpgme.tar.gz
 GPGME_TAR = /tmp/gpgme.tar.gz
 GPGME_DIR = /tmp/gpgme
 GPGME_PATH = -I$(GPGME_DIR)/usr/include -L$(GPGME_DIR)/usr/lib
 
-LIBGPG-ERROR_VERSION = 1.23-5
+LIBGPG-ERROR_VERSION = 1.24-6
 LIBGPG-ERROR_URL = https://github.com/amylum/libgpg-error/releases/download/$(LIBGPG-ERROR_VERSION)/libgpg-error.tar.gz
 LIBGPG-ERROR_TAR = /tmp/libgpgerror.tar.gz
 LIBGPG-ERROR_DIR = /tmp/libgpg-error
 LIBGPG-ERROR_PATH = -I$(LIBGPG-ERROR_DIR)/usr/include -L$(LIBGPG-ERROR_DIR)/usr/lib
 
-LIBASSUAN_VERSION = 2.4.2-6
+LIBASSUAN_VERSION = 2.4.3-7
 LIBASSUAN_URL = https://github.com/amylum/libassuan/releases/download/$(LIBASSUAN_VERSION)/libassuan.tar.gz
 LIBASSUAN_TAR = /tmp/libassuan.tar.gz
 LIBASSUAN_DIR = /tmp/libassuan
