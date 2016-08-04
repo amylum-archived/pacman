@@ -18,7 +18,7 @@ LIBARCHIVE_TAR = /tmp/libarchive.tar.gz
 LIBARCHIVE_DIR = /tmp/libarchive
 LIBARCHIVE_PATH = -I$(LIBARCHIVE_DIR)/usr/include -L$(LIBARCHIVE_DIR)/usr/lib
 
-CURL_VERSION = 7.50.0-14
+CURL_VERSION = 7.50.1-15
 CURL_URL = https://github.com/amylum/curl/releases/download/$(CURL_VERSION)/curl.tar.gz
 CURL_TAR = /tmp/curl.tar.gz
 CURL_DIR = /tmp/curl
