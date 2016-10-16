@@ -1,3 +1,6 @@
 [submodule "upstream"]
 	path = upstream
 	url = git://projects.archlinux.org/pacman.git
+[submodule "meta"]
+	path = meta
+	url = git://github.com/amylum/pkgforge-helper
