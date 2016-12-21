@@ -5,12 +5,12 @@ licenses 'COPYING'
 
 deps(
   libarchive: '3.2.2-1',
-  curl: '7.51.0-1',
+  curl: '7.52.0-1',
   openssl: '1.0.2j-1',
   zlib: '1.2.8-4',
-  gpgme: '1.8.0-1',
-  'libgpg-error': '1.25-1',
-  libassuan: '2.4.3-10'
+  gpgme: '1.8.0-2',
+  'libgpg-error': '1.26-1',
+  libassuan: '2.4.3-11'
 )
 remove_linker_archives
 
