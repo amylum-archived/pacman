@@ -8,7 +8,7 @@ deps(
   curl: '7.53.1-1',
   openssl: '1.0.2k-1',
   zlib: '1.2.11-1',
-  gpgme: '1.8.0-3',
+  gpgme: '1.9.0-1',
   'libgpg-error': '1.27-1',
   libassuan: '2.4.3-12'
 )
