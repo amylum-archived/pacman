@@ -5,7 +5,7 @@ licenses 'COPYING'
 
 deps(
   libarchive: '3.3.1-1',
-  curl: '7.54.0-2',
+  curl: '7.54.1-1',
   openssl: '1.0.2l-1',
   zlib: '1.2.11-1',
   gpgme: '1.9.0-1',
