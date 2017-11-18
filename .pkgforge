@@ -21,16 +21,16 @@ deps(
     checksum: '5596e2d39ef98e2323ac415f50afa71a433ed65c23e8d1f2723f711f5ffb4f32'
   },
   gpgme: {
-    version: '1.9.0-1',
-    checksum: '8ff565d5f352d2cbb6505ab20154061c3823fd7425efbe507abb0abc17e28c32'
+    version: '1.9.0-2',
+    checksum: '8609479e4c5f254fef80d803be0485d3eef64ce7b9128e28ba3ba72377b58a28'
   },
   'libgpg-error': {
     version: '1.27-1',
     checksum: '7ae57f06296bf6ef98fc450f7ef7d1a47753d429c1cdc440045a03ed108d58de'
   },
   libassuan: {
-    version: '2.4.3-12',
-    checksum: '41bdfda2cc5da83d6c77c42212697ad6bc40d444d9e9c1470e7d561bb1f5c249'
+    version: '2.4.4-1',
+    checksum: 'a6deb725615c8557fc241668022e716437cd933a1bec0e9ea6f860197250da00'
   }
 )
 remove_linker_archives
