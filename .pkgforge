@@ -49,7 +49,7 @@ harden
 
 build do
   run './autogen.sh'
-  configure 'LIBSSL_LIBS' => '-lz'
+  configure 'LIBSSL_LIBS' => '-lz -lcrypto -lssl'
   make
   install
 end
