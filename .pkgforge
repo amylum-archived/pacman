@@ -9,8 +9,8 @@ deps(
     checksum: '2d30ae2269c7c6eb05c8387e423714b123727ecea973521754fa4d430dcd8028'
   },
   curl: {
-    version: '7.58.0-2',
-    checksum: '40536b68ab15bdd6adf374641078a8c5a01b83636cd3104afa2299c096b4a63f'
+    version: '7.59.0-1',
+    checksum: '9088859e1121f4e3b797ade087fb6c098790ba7dc0df4cafe2fa467f5be9f3fd'
   },
   openssl: {
     version: '1.1.0g-2',
@@ -21,16 +21,16 @@ deps(
     checksum: '5596e2d39ef98e2323ac415f50afa71a433ed65c23e8d1f2723f711f5ffb4f32'
   },
   gpgme: {
-    version: '1.10.0-1',
-    checksum: '5567e423fd1800bae9a45a4e5c622e43cbc5fb62e78309c4172a008ca0f65022'
+    version: '1.10.0-2',
+    checksum: 'abd4f6a6f3ed7e7e1db5f0762f04a05d9127b27514617be07a143eae49e67562'
   },
   'libgpg-error': {
-    version: '1.27-1',
-    checksum: '7ae57f06296bf6ef98fc450f7ef7d1a47753d429c1cdc440045a03ed108d58de'
+    version: '1.28-1',
+    checksum: '55eec88e8ef7164bc4c2a851fb1f8128f3fe0b0a5e464db77725affb19191f6e'
   },
   libassuan: {
-    version: '2.5.1-1',
-    checksum: '42030909765a93a1da85f30097831b3a13b297c11c2b43d2845511b82c367791'
+    version: '2.5.1-2',
+    checksum: '01e2a567ab7d555245856556f240f7ecc00d0a69cbc06db8bb7a26c46571229b'
   }
 )
 remove_linker_archives
