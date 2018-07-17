@@ -9,8 +9,8 @@ deps(
     checksum: '2d30ae2269c7c6eb05c8387e423714b123727ecea973521754fa4d430dcd8028'
   },
   curl: {
-    version: '7.60.0-2',
-    checksum: '40553628e91e1babc540450e3391754fabf881e7489e327e1837de6780d39c2d'
+    version: '7.61.0-1',
+    checksum: '11f600bfd0de983b75015f0c2250e79fbd5339ce9c0314dba619edf138574003'
   },
   openssl: {
     version: '1.1.0h-3',
