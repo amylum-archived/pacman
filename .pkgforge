@@ -5,8 +5,8 @@ licenses 'COPYING'
 
 deps(
   libarchive: {
-    version: '3.3.2-1',
-    checksum: '2d30ae2269c7c6eb05c8387e423714b123727ecea973521754fa4d430dcd8028'
+    version: '3.3.3-1',
+    checksum: '9c65f16c38b0ec97142eac034cdb57348f9ec8710a757361ef19e80e9d9748d0'
   },
   curl: {
     version: '7.61.1-2',
