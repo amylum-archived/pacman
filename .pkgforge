@@ -21,8 +21,8 @@ deps(
     checksum: '7da7212123edac6d5d5dc2db8fb10a6af06472578840c51e489e1f391b66c208'
   },
   gpgme: {
-    version: '1.12.0-2',
-    checksum: '58516bf27f0033e1e8bb72c2878459db840906df79dd4f9bbd3e2d850e15999e'
+    version: '1.12.0-3',
+    checksum: '79d1acb0643c949c5c152d3e3a587552bdb7dc003fe6b80b663b7d0ba6dfd7da'
   },
   'libgpg-error': {
     version: '1.33-1',
