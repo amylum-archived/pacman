@@ -25,12 +25,12 @@ deps(
     checksum: '7d05c915c686d9d4079742bad8de1d4ad617f5c03ba2209b4dcf411d5a113d15'
   },
   'libgpg-error': {
-    version: '1.35-1',
-    checksum: '1930a9879a364751e2486ee796d8c081b3a5307aa1e70f5b84e15b612b9d120b'
+    version: '1.36-1',
+    checksum: 'a04c7d61e948f47cb0efaa26c9185f123d8e480e73a367617facb86e85ea7839'
   },
   libassuan: {
-    version: '2.5.3-1',
-    checksum: '01e48328f1d2442d8a06ed1890b3a642f73f6f56345ec59be9a989adea801cd8'
+    version: '2.5.3-2',
+    checksum: 'e0d64ecd038b8548e81cc0e1c3bebd088b5525dfb8a79d3d2a6347c73987144d'
   }
 )
 remove_linker_archives
