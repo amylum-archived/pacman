@@ -1,6 +1,6 @@
 [submodule "upstream"]
 	path = upstream
-	url = git://projects.archlinux.org/pacman.git
+	url = https://gitlab.archlinux.org/pacman/pacman.git
 [submodule "meta"]
 	path = meta
-	url = git://github.com/amylum/pkgforge-helper
+	url = https://github.com/amylum/pkgforge-helper
